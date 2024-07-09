@@ -1,55 +1,72 @@
+<!--vai escrevendo o html aos poucos e estilizando o pouco que fez, que se der errado é mais fácil de ver o que está errado-->
+<!--se achar necessário vai fazendo comentários no seu código pra não se perder-->
+<!--cuida pra ver se a tag <> esse negocinho tão certo-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaslesVPN</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>LaslesVPN</title> <!--Aqui vai o título que vai ficar na aba do google, lá vai ser "Essencialmente"-->
+    <link rel="stylesheet" href="./css/style.css"> <!--link com o css tem esse ./css/ antes do nome do arquivo porque esta em uma pasta,
+     se você não criar uma pasta é só dar link:css e selecionar o atalho q vai aparecer se criar a pasta css aqui pelo vscode e o arquivo
+     de estilo dentro da pasta vai ter que fazer que nem esta ali-->
 </head>
 <body>
-    <header>
-        <div class="headerlogo">
-            <img src="./img/logo.png" alt="logolasles" width="180px">
-        </div>
-        <nav class="headernav">
-            <ul>
-                <li><a href="./amote.html">About</a></li>
-                <li><a href="./amote.html">Feature</a></li>
-                <li><a href="./amote.html">Pricing</a></li>
-                <li><a href="./amote.html">Testimonials</a></li>
-                <li><a href="./amote.html">Help</a></li>
-            </ul>
-        </nav>
-        <div class="headerbuttons">
-            <a href="./amote.html" class="buttonsigin">Sign in</a>
-            <a href="./amote.html" class="buttonsigup">Sign Up </a>
-        </div>
-    </header>
+    <header> <!--Aqui abriu o cabeçalho, parte que fica lá em cima-->
+        <div class="headerlogo"> <!--criou uma div pra coloca a imagem da logo dentro e ficar mais fácil para configurar no css depois-->
+            <img src="./img/logo.png" alt="logolasles" width="180px"> <!--inseri a imagem e seguindo o mesmo esquema do css como ela esta 
+            na pasta chamada img eu fiz ./img/ . Eu já ajustei o tamanho dela por aqui pelo width, mas o certo é pelo css que dai é só colocar 
+            o nome da classe da imagem e dar o mesmo comando que ta ali-->
+        </div> <!--fechamento da div que contem a logo-->
+        <nav class="headernav"><!--abre um menu de navegação no header, o nav é onde fica os links que geralmente levam a gente pra outra página.
+             Numa loja de roupas por exemplo o nav poderia conter: calçados, camisetas, acessórios etc.-->
+            <ul> <!--ul serve para organiza os links, ele cria uma lista com bolinhas, ele vai ficar na vertical, mas dps no css ajeita na horinzontal-->
+                <li><a href="">About</a></li> <!--para fazer os links dentro da ul vai abrir um li(que é o tópico da lista) e dentro de cada li vai os links (a)
+                dentro do a <li><a> NESSE ESPAÇO AQUI ESCREVE O QUE VAI APARECER </a></li>. mesma coisa pros de baixo-->
+                <li><a href="">Feature</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Testimonials</a></li>
+                <li><a href="">Help</a></li>
+            </ul> <!--fechamento da ul-->
+        </nav><!--Fechemento do nav, no nav vai só esses links-->
+        <div class="headerbuttons"> <!--outra div para inserir os botões do tipo "entrar" e "cadastre-se"-->
+            <a href="" class="buttonsigin">Sign in</a><!--mesmo esquema do a de cima só que esse aq não precisa do ul e li, foi criado uma classe
+            pq a estilização desses botões vão ser diferentes dos links de cima-->
+            <a href="" class="buttonsigup">Sign Up </a>
+        </div> <!--fehca div dos botões-->
+    </header> <!--fechou o cabeçalho-->
     
-    <main>
-        <div class="main-pt1">
-            <h1>Want anything to be easy with
-                <span class="title-highlight">LaslesVPN</span>
+    <main><!--conteudo principa da página. aquela parte que vai ter metade texto e metade imagem-->
+        <div class="main-pt1"><!--parte 1 do main. como são duas partes cria duas divs separadas para estilizar no css dps -->
+            <h1>Want anything to be easy with <!--h1 da página, título principal. SÓ TEM UM, já era pra ter na primeira parte da prova então não coloca na segunda parte outro h1-->
+                <span class="title-highlight">LaslesVPN</span> <!--span dentro do h1 para dar estilo diferente a essa parte em específica, 
+                acho que não vai ter nada assim-->
             </h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis eius quas laboriosam nulla dolor obcaecati molestias debitis.</p>
-            <a href="" class="main-button"> Get Started</a>
-        </div>
-        <div class="main-pt2"></div>
+            <a href="" class="main-button"> Get Started</a> <!--Mesmo esquema dos botões lá do header-->
+        </div><!--fecha a primeira parte do main-->
+        <div class="main-pt2"></div> <!--parte 2 do main, onde vai ser enserido a imagem. a imagem não está aqui porque vai ser enserida pelo css-->
     </main>
-    <section class="sec1">
-        <div class="sec1-pt1">
-            <div class="sec1-card">
-                <div class="img-sec1-card">
-                    <img src="./img/icon-users.png" alt="icone usuario" width="50px">
-                </div>
-                <div class="text-card-sec1">
-                    <h2 class="titulo-card-sec1">90+</h2>
-                    <p>Users</p>
-                </div>
-            </div>
-            <div class="linha-vertical"></div>
+    <section class="sec1"> <!--AQUI COMEÇA O QUE A GENTE VAI FAZER-->
+        <div class="sec1-pt1"><!--Dividi a seçao em mais partes que nem no main pq vi q tinha mais coisa além do card. Tipo se tiver um titulo no
+            centro ai mais um paragrafo e depois os card em baixo pode fazer uma seção e dividir ela em duas partes. Essa aqui é uma div que contém 
+            todas as outras div que formam os cards porque dai eu mudo os itens dentro dela que nesse caso são os cards-->
+            <div class="sec1-card"><!--começa os cards, essa div vai conter tudo o que UM card tem geralmente é: uma imagem, um título e uma descrição-->
+                <div class="img-sec1-card"> <!--Cria uma div pra inserir a imagem, tipo que nem foi feito la pra imagem da logo-->
+                    <img src="./img/icon-users.png" alt="icone usuario" width="50px"> <!--mesma coisa da imagem de cima, lembra doq eu falei sobre o tamanho-->
+                </div> <!--fecha a div da imagem, não vai mais nada dentro dela-->
+                <div class="text-card-sec1"><!--Outra div, continua dentro da div q contem os elementos do card. Essa div de agora contem os elemetos de texto do card-->
+                    <h2 class="titulo-card-sec1">90+</h2> <!--titulo do card. lembra q eu falei q não tinha mais de um h1? então agr usa um h2 q dai pode usar mais vezes-->
+                    <p>Users</p> <!--descrição do card-->
+                </div><!--fecha a div dos elementos de texto-->
+            </div><!--fecha a div que contem TODOS os ELEMENTOS de um card-->
+            <div class="linha-vertical"></div> <!--aqui eu criei essa div vazia pq tinha um risco na página entre os cards, acho dificil 
+            que tenha algo assim, mas se tiver faz exatamente igual e depois só muda a estilização que vai ter lá no css-->
         
-            <div class="sec1-card">
+            <div class="sec1-card"> <!--ai tudo aq pra baixo é a mesma coisa dali de cima então quando você fizer um card e ele deu certo.
+                só copia e cola a estutura deles quantas vezes precisar,só cuida pra pegar as divs certo se não vai dar merda.
+                uma dica é seguir a linha em branco q tem aq da esquerda pra ver onde q um elemento se fecha aí é só copiar 
+                se eu fosse copiar aqui seria por exemplo da linha 66 até a linha 77, incluindo a 77-->
                 <div class="img-sec1-card">
                     <img src="./img/icon-locations.png" alt="icone localizacao" width="50px">
                 </div>
@@ -69,14 +86,18 @@
                 </div>
             </div>
         </div>
-        <div class="sec1-pt2">
-            <div class="sec1-pt2-img"></div>
-            <div class="sec1-pt2-text">
-                <h2 class="sec1-pt2-titulo">We Provide Many Features You Can Use</h2>
+        <div class="sec1-pt2"> <!--Segunda parte da seçao-->
+            <div class="sec1-pt2-img"></div><!--div para inserir uma imagem pelo css-->
+            <div class="sec1-pt2-text"><!--parte de texto da div. vai ficar divido ao meio, aqui eu errei, ao invez de ter criado outra div
+                podia ter isdo outra seçao, mas ta funcionando igual-->
+                <h2 class="sec1-pt2-titulo">We Provide Many Features You Can Use</h2><!--titulo da div, H2-->
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, dolorum cum in, veniam aut necessitatibus beatae neque iste, temporibus et eum! Incidunt veritatis voluptatem ex autem voluptates tenetur aliquid nisi.</p>
-                <div class="check-sec1-pt2">
+                <div class="check-sec1-pt2"> <!--criei essa div agora para poder criar uma lista com os check-->
                     <ul>
-                        <li><img src="./img/icon-check.png" alt="" width="20px"><span>Powerfull online protection</span></li>
+                        <li><img src="./img/icon-check.png" alt="" width="20px"><span>Powerfull online protection</span></li> <!--mesmo esquema das
+                        de cima só q a difereça é q como no lugar da bolinha normal da div vai agora um check eu inseri a imagem do check dentro
+                        do li pra imagem já ficar mais alinhada com o texto, dai coloquei um span ao invez de escrever o texto direto pq dai fica
+                        mais alinhado e facilitou pra alinhar pelo css-->
                         <li><img src="./img/icon-check.png" alt="" width="20px"><span>Internet without borders</span></li>
                         <li><img src="./img/icon-check.png" alt="" width="20px"><span>Supercharged VPN</span></li>
                         <li><img src="./img/icon-check.png" alt="" width="20px"><span>No specific time limits</span></li>
@@ -85,23 +106,27 @@
             </div>    
         </div>
     </section>   
-    <section class="sec3">
-        <div class="sec3-title">
-            <h2>Choose Your Plan</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non cupiditate explicabo voluptates sit sunt fugit.</p>
+    <section class="sec3"> <!--Segunda seção, ta sec3 pq ali onde eu falei q podia ser outra seção é pq era pra ser outra seção dai aquela
+        ia ser a segunda e ia dar certo essa como a 3a, mas da nada-->
+        <div class="sec3-title"> <!--Essa seção tem uma parte de texto e depois cards, então fiz uma div pra os texto que é essa aq-->
+            <h2>Choose Your Plan</h2> <!--e aq vai o titulo-->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non cupiditate explicabo voluptates sit sunt fugit.</p><!--e aq o parágrafo-->
         </div>
-        <div class="sec3-card-container">
-            <div class="sec3-card">
-                <div class="card-img">
+        <div class="sec3-card-container"><!--aq já começa os cards, todos são no mesmo esquema dos cards lá de cima. a diferença é que
+            esses a imagem é em cima do texto e e tem um checklist e um botão, mas a estrutura é a mesma. Se lembra que lá em cima tinha
+            sido criado uma div que continha todos os cardS? aq é igual só mudou o nome-->
+            <div class="sec3-card"> <!--e essa div aq contem os elementos do card como a outra a diferença é q essa tem mais elementos-->
+                <div class="card-img"> <!--div pra imagem, já foi feitas várias lá em cima-->
                     <img src="./img/img-card.png" alt="">
                 </div>
-                <div class="card-desc">
-                    <h3>Free Plan</h3>
-                    <div class="card-options">
-                        <div class="card-itens">
-                            <img src="./img/icon-check.png" alt="">
-                            <span>Unlimited Bandwitch</span>
-                        </div>
+                <div class="card-desc"><!--aq é oq a div tem de texto-->
+                    <h3>Free Plan</h3> <!--titulo da div-->
+                    <div class="card-options"><!--aq ainda foi criada outra div q vai conter TODAS AS LINHAS de checklis. Imagin que vai fazer uma
+                        compra e tu fez uma lista, a folha onde tu escreveu oq comprar é essa div aq e cada uma das div abaixo é um produto-->
+                        <div class="card-itens"> <!--cada um desses card-itens representa um linha do check list, que é composta por uma imagem (check) e texto-->
+                            <img src="./img/icon-check.png" alt=""> <!--imagem check-->
+                            <span>Unlimited Bandwitch</span><!--texto-->
+                        </div><!--fecha a div que representa a linha do checklist-->
                         <div class="card-itens">
                             <img src="./img/icon-check.png" alt="">
                             <span>Encrypted Connection</span>
@@ -114,13 +139,16 @@
                             <img src="./img/icon-check.png" alt="">
                             <span>Works on All Devices</span>
                         </div>
-                    </div>
+                    </div><!--fechou a div q tinha TODOS os checlist-->
                 </div>
-                <div class="card-button">
-                    <h3>Free</h3>
-                    <button class="card-select">Select</button>
-                </div>
-            </div>
+                <div class="card-button"><!--a div aq tmb tem um botão que é como se o cara fosse querer clicar pra comprar-->
+                    <h3>Free</h3> <!--Aq é o preço do serviço. Aq ele só esta dentro da div e não vai virar um botão se a gente não estilizar
+                    e nem queremos que ele vire um botão, ele só pertence ao mesmo campo q o botao q ta aq em baixo-->
+                    <button class="card-select">Select</button><!--Outro jeito de criar um botão é assim, ao inves de usar o href como lá emcima
+                    pra prova os dois jeitos funcionam e a estilização é praticamente a mesma en fds-->
+                </div><!--fecha a div q tem o botao e o preço-->
+            </div><!--fecha a div do meu PRIMEIRO CARD, aí agr é só copiar bem certinho as coisas e fazer as alterções como por exemplo adicionar
+            mais um item no checklist, mas também é só copiar e colar a estrutura que já foi usada e pronto-->
             <div class="sec3-card">
                 <div class="card-img">
                     <img src="./img/img-card.png" alt="">
@@ -145,13 +173,15 @@
                             <span>Works on All Devices</span>
                         </div>
                         <div class="card-itens">
-                            <img src="./img/icon-check.png" alt="">
+                            <img src="./img/icon-check.png" alt=""><!--o de cima nao tinha esse, veja que eu só copiei e colei a estrutura do
+                            item da lista e mudei o texto-->
                             <span>Connect Anywere</span>
                         </div>
                     </div>
                 </div>
                 <div class="card-button">
-                    <h3>$9 <span> / mo</span></h3>
+                    <h3>$9 <span> / mo</span></h3> <!--o preço desse aq é diferente. eu criei esse span dentro do h3 pra conseguir mudar 
+                    a cor do span depois e ficar igual no modelo-->
                     <button class="card-select">Select</button>
                 </div>
             </div>
@@ -193,8 +223,8 @@
                     <button class="card-select">Select</button>
                 </div>
             </div>
-        </div>
+        </div><!--fecha o container que continha todos os tres cards q foram criado-->
         
-    </section>
+    </section><!--fecha a sec3-->
 </body>
 </html>
