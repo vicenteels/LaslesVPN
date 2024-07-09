@@ -1,67 +1,80 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    --text-color: #4F5665;
+*{ /*seletor universal, TEM QUE TER*/
+    margin: 0; /*TEM QUE TER ISSO*/
+    padding: 0; /*TEM QUE TER ISSO*/
+    box-sizing: border-box; /*TEM QUE TER ISSO*/
+    --text-color: #4F5665; /*aq tu vai colocar as cores dai e as variaveis q ela der no lugar dessas cores*/
     --title-color: #0B132A;
     --primary-color: #F53838;
-    --margin: 20px 40px;
+    --margin: 20px 40px; /*É TER ISSO, pq o paddin e a margem foram zerados então nos elementos você coloca um margin: var(--margin); que vai ser sucesso
+    pq dai ele não vai deixar tudo colado nos lado, pode usar essa configuração aq. Cuida que dependendo se voce colocar ele num header por exemplo e voce 
+    dar cor pro header você vai ver q a margem que você tirou vai ficar sem cor. Nesses casos é mais interessante você colocar o margin nos elementos 
+    filhos que dai a cor do fundo do header, nesse exemplo, vai ficar certo*/
     font-family:Arial, Helvetica, sans-serif;
 }
 
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: var(--margin)
+    display: flex; /*Vvai usar em QUASE tudo, o display flex vai além de deixar os itens de listas q estão em colunas em linha vai "habilitar" novas
+    funções de estilização q a gente vai precisar*/
+    justify-content: space-between; /*uma das funções do display flex. ele vai dar um ESPAÇO SOMENTE ENTRE os elementos que estão dentro
+    do header nesse caso, da o espaçamento dos itens q estão dentro do elemento pai*/
+    align-items: center; /*alinha os itens ao centro da ALTURA disponivel, alinhamento ao centro na VERTICAL, alinha ELEMENTOS*/
+    margin: var(--margin); /*aq eu usei margin pq o meu header não tem cor de fundo, mas se o teu elemento tiver uma cor de fundo CUIDADO com o margin
+    pq ele vai reduzir a margem no elemento logo reduz o espaço q ele ocupa e dai ele não preenche o msm tanto q antes*/
 }
 
 .headernav ul{
-    display: flex;
-    list-style: none;
-    gap: 30px;
+    display: flex; /*display flex nesse ul pq como eu quero que eles fiquem deitado pra ficar no meu nav ele já faz isso*/
+    list-style: none; /*FAZ ISSO EM TODO UL, TOOOODOO. ele vai tirar aquele pontinho do lado e vai deixar só a escrita*/
+    gap: 30px; /*é um tipo de espaçamento q vem com o display flex, geralemnte da pra usar. mais usado em listas e tal q é o caso
+    pq aq ele ta dando o espaço entre os elementos que estão dentro do ul o li no caso*/
 }
 
 .headernav ul li a{
-    text-decoration: none;
-    color: var(--text-color);
+    text-decoration: none; /*SEMPRE USADO PARA OS links, server pra tirar aquele sublinhado da palavra. tem que estar selecionado o a,
+    se for no li e colocar esse comando NÃO DA CERTO tem q ser no A*/
+    color: var(--text-color); /*muda a cor do texto pra essa variavel ai*/
 }
 
 .headernav ul li a:hover{
     color: var(--primary-color);
-    font-weight: bold;
+    font-weight: bold; /*muda a expessura fonte. 400 vai deixar normal, 700 ou bold negrito, e bolder bem negrao*/
 }
 
 .headerbuttons{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /*outra funçaõ do display flex, serve pra alinhar ao centro na horizontal um ELEMENTO, para alinha texto ao centro
+    na horizontal é: text-align. aq alinha ELEMENTOS, CAIXAS*/
+    align-items: center; 
     gap: 30px;
 }
 
 .headerbuttons .buttonsigin{
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 700; /*mesma coisa q usar bold*/
     color: var(--text-color);
-    border-radius: 20px;
-    padding: 10px 30px;
+    border-radius: 20px; /*deixa as bordas do elemento arredondado, quanto mais pixels mais redondo fica*/
+    padding: 10px 30px; /*espaçamento q é do elemento para fora, de dentro pra fora imagina isso. o primeiro (10) é pra dar espaço em cima e em baixo
+    e o segundo (30) pra dar espaço nos lados. DA PRA USAR SÓ UM NÚMERO, DAI ELE VAI DAR O MESMO ESPAÇAMENTO EM TODAS AS DIREÇÕES*/
 }
 
 .headerbuttons .buttonsigup, .card-select{
     text-decoration: none;
     font-weight: 700;
     color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--primary-color); /*pra fazer uma borda ao redor do elemento. o pixel vai dar uma largura a borda, o solid é o tipo da borda
+    q é uma linha normal, e o ultimo a cor da borda*/
     border-radius: 20px;
     padding: 10px 30px;
 }
 
-.headerbuttons .buttonsigin:hover{
-    background-color: var(--primary-color);
+.headerbuttons .buttonsigin:hover{/*esse :hover vai usar pra mudar alguma coisa no elemento quando passa o mouse em cima, geralmente são as cores]
+    de fundo e cor do texto, como aconteceu aq em baixo*/
+    background-color: var(--primary-color); /*muda a cor do fundo do elemento*/
     color: white;
 }
 
-.buttonsigup:hover, .card-select:hover{
+.buttonsigup:hover, .card-select:hover{ /*mesma coisa. PQ TEM UMA VIRGULA AI? pq eu estou aplicando a mesma propriedade pra dois elementos
+    ai eu não perco tempo escrevendo dnv*/
     background-color: var(--primary-color);
     color: white;
 }
@@ -71,7 +84,7 @@ main{
     justify-content: center;
     align-items: center;
     margin: var(--margin);
-    padding-top: 30px;
+    padding-top: 30px; /*da um espçamento em cima*/
 }
 
 p{
@@ -81,13 +94,13 @@ p{
 .main-pt1{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 50%; /*define o elemento selecionado para ocupar apenas metade da tela*/
     gap: 30px;
-    height: 300px;
+    height: 300px; /*da uma altura pra esse elemento, é bom fazer isso se a outra metade vai ter uma imagem (é o caso disso)*/
 }
 
 h1{
-    font-size: 65px;
+    font-size: 65px; /*tamanho da letra*/
 }
 
 .main-pt1 h1 span{
@@ -95,7 +108,7 @@ h1{
 }
 
 .main-pt1 p{
-    padding-bottom: 30px
+    padding-bottom: 30px; /*espaçamento em baixo do elemento*/
 }
 
 .main-pt1 a{
@@ -106,9 +119,9 @@ h1{
     color: white;
     background-color: var(--primary-color);
     border-radius: 10px;
-    width: 160px;
+    width: 160px; /*largura de um elemento*/
     padding: 20px;
-    box-shadow: 0px 30px 45px -15px var(--primary-color);
+    box-shadow: 0px 30px 45px -15px var(--primary-color); /*sombra, faz pelo site lá, SÓ DPS Q TIVER TUDO CERTINHO VAI ATRAS DE SOMBRA*/
 }
 
 .main-pt1 a:hover{
@@ -118,10 +131,11 @@ h1{
     border: 1px solid var(--primary-color);
 }
 
-.main-pt2{
-    width: 50%;
-    background-image: url("../img/img-main.png");
-    height: 400px;
+.main-pt2{ /*INSERÇÃO DA IMAGEM PELO CSS, SÓ FAZER EXATAMENTE A MSM COISA*/
+    width: 50%; /*se for necessário pode diminuir um pouco a porcentagem desse e do main-pt1 por exemplo se não tiver configurando direito
+    tipo uns 40% pra cada um já ta ok, mas é pra dar certo*/
+    background-image: url("../img/img-main.png"); /*seleciona onde a imagem ta*/
+    height: 400px; /*tamanho dessa div q ta a imagem, vai ser o tamanho da img basicamente, sempre bom deixar a mesma altura da outra metade (main-pt1) nesse caso*/
     background-repeat: no-repeat; /*não deixa a imagem repetir para ocupar o espaço*/
     background-position: center; /*centraliza a imagem ao espaço*/
     background-size: cover;/* --> a imagem ocupa todo o imagem disponível*/
@@ -133,7 +147,8 @@ h1{
 
 .sec1-pt1{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /*outra função por causa do display flex. é parecido com o space-between, mas ele além de dar um espaço MENOR
+    entre os elementos ele também da umum espaço no lado desses elementos, ao redor mesmo como o nome diz*/
     padding-top: 100px;
     box-shadow: 0px 30px 45px -40px rgb(155, 155, 155);
 }
@@ -158,7 +173,7 @@ h1{
 }
 
 .sec1-pt2-img{
-    width: 45%;
+    width: 45%; /*aq eu usei 45% ao inves de 50% não sei pq, devia estar dando algo errado na imagem*/
     background-image: url("../img/img-section.png");
     height: 450px;
     background-repeat: no-repeat; /*não deixa a imagem repetir para ocupar o espaço*/
@@ -168,14 +183,15 @@ h1{
 
 .sec1-pt2-text{
     display: flex;
-    flex-direction: column;
-    width: 45%;
+    flex-direction: column; /*isso aq é foda. qnd tu usa o display flex ele deixa tudo na horizontal SÓ QUE AS VEZES TU QUER Q FIQUE NA VERTICAL
+    e ele faz isso ele volta pra vertical e ainda da pra usar as outras funcionalidades do display flex*/
+    width: 45%; /*veja q o de cima eu deixei em 45% e esse também, eles juntos não precisam fechar 100%, é mais de como vai querer organizar
+    essa relaçao texto/imagem */
     height: 400px;
-    justify-content: left;
 }
 
 .sec1-pt2-text p{
-    line-height: 1.5;
+    line-height: 1.5; /*da espassamento ENTRE LINHAS. tipo aquela formatação do word*/
 }
 
 .sec1-pt2-titulo{
@@ -209,8 +225,8 @@ h1{
 
 .sec3-title h2{
     font-size: 50px;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 50px; /*mesma propriedades da margem só q apenas pra cimas*/
+    margin-bottom: 20px; /*mesma propriedades da margem só q apenas pra baixo*/
 }
 
 .sec3-card-container{
